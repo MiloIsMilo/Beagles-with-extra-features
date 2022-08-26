@@ -7,7 +7,7 @@ def username():
         with open(filename, 'r') as file_object:
             username = json.load(file_object)
     except FileNotFoundError:
-        with open('user/' + filename, 'w') as file_object:
+        with open(filename, 'w') as file_object:
             username = input("Enter your nickname:\n>>> ")
             json.dump(username.title(), file_object)
     else:
